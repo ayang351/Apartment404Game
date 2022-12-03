@@ -18,11 +18,12 @@
   }
   
   .container {
-    width: 800px;
+    width: 900px;
     max-width: 80%;
     background-color: rgba(0, 0, 0, 0.3);
     padding: 10px;
     border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
   }
   
   .btn-grid {
