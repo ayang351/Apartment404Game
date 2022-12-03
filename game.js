@@ -121,7 +121,21 @@ const textNodes = [
   {
     id: 8,
     bkgd: "url('../../images/.png')",
-    text: 'insert image of letter',
+    text: 'To the resident of Apartment 404,\n' +
+    'If you are receiving this letter, then I must inform you with the deepest regret that you have been placed under a terrible curse. Though the misfortune of your present circumstances is most utterly unfair, it is nonetheless the reality that you must face, especially if you intend on lasting through the night.' +
+    'This curse is one that has been allowed to fester for decades, its darkness has grown so palpable that it has managed to crawl from the deepest depths of occultic obscurity and morph the very reality it subsides in.' +
+    'Though you may now find yourself in a disposition most dire, there is still one glimmer of hope that you may cling onto in order to ensure your survival. Now, I advise you read the next few lines very carefully, as failing to do so will most certainly cost your life. The only way to expel the curse plaguing this locale is to perform the following ritual. First, you must obtain the following components.\n\n' +
+    '2 candles alight with flames of life\n\n' +
+    '4 talismans imbued with mantras of protection\n\n' +
+    'A spotless bowl with contents emptied\n\n' +
+    'Two halves of a long-forgotten chant\n\n' +
+    'And lastly,\n' +
+    'Two drops of blood from the cursed victim\n\n' +
+    'Once you have procured all of these elements. Take them into a large, empty room. Place the bowl, then the candles, then the talismans. Once this has been completed, utter the chant 4 times, then let your blood rip into the bowl. If successful, you will be freed from the wretches of the curse.' +
+    'One final word of warning, you must not give in to the fallacies of the senses. The horrors you witness tonight will overwhelm your capacity to trust your own mind. Focus only on the completion of the ritual, that is the one truth on which you can fully rely upon.\n' +
+    '...\n' +
+    'the letter ends, there is no indication of the identity of the writer, only a date, 30 years ago from today' 
+    ,
     options: [
       {
         text: 'Proceed',
