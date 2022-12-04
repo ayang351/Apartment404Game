@@ -43,7 +43,7 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 0,
-    bkgd: "url('../../images/GhostReflection.png')",
+    bkgd: "url('images/GhostReflection.png')",
     text: 'Welcome to Apartment 404\n\n' + "This is an atmospheric text-based horror game based on the mysteries surrounding a haunted apartment where residents have reported to have experienced an odd level of paranormal events while living there. " +
     "You are to play as the newest resident of apartment 404 that will uncover the mysteries of apartment 404.\n\n" + "tread cautiously and choose wisely",
     options: [
@@ -56,7 +56,7 @@ const textNodes = [
   //start of pre-exploration
   {
     id: 1,
-    bkgd: "url('../../images/DoorEntrance.png')",
+    bkgd: "url('images/DoorEntrance.png')",
     text: 'You struggle to keep your eyes open as you fumble through your keychain. The semester has only just begun, and yet you already feel as if you are drowning in assignments. You have spent the entirety of the past few days attending lectures while juggling project meetings, and it is beginning to take its toll. You are overwhelmed with an insurmountable feeling of exhaustion, worsened by the fact that you have not been able to get a wink of sleep ever since…*click*. The weighty sound of a key turning into a lock interrupts your line of thought, replacing them with an intense feeling of relief. Finally, you can rest for the day. You stifle a yawn as you pull open the door. Not wanting to spend any second longer standing in the cold, dimly-lit hallway, you step into the dark entrance of your new home, apartment 404.',
     options: [
       {
