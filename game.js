@@ -41,6 +41,7 @@ function selectOption(option) {
 }
 
 const textNodes = [
+  //start of pre-exploration
   {
     id: 1,
     bkgd: "url('../../images/DoorEntrance.png')",
@@ -221,6 +222,7 @@ const textNodes = [
     ]
   },
   {
+    //TABLE
     id: 14,
     bkgd: "url('../../images/BrokenTable.png')",
     text: "What was once your desk has now been reduced to an amorphous pile of wood. Most of the legs are either splintered beyond repair or are lodged through the desk itself. You don't see your computer anywhere, but you do see your monitor, that is, what's left of it, as one of the desk legs has pierced clean through one side and out the other." +
@@ -234,6 +236,7 @@ const textNodes = [
     ]
   },
   {
+    //DOOR 
     id: 15,
     bkgd: "url('../../images/blackBG.png')",
     text: "You go to the entranceway of your bedroom. As soon as you arrive, you nearly drop the candle you’ve been clinging to for dear life. In front of you appears a pitch-black void in place of where the door should normally be. You reach out to it, attempting to perhaps see if it will still work as an exit. Before your fingers can even get within a foot of the hole, it begins to writhe and emanates a visible aura so strong that it nearly knocks you off your feet as it propels you backward. The only exit out of your room, and is completely blocked, though perhaps you can find a way to dispel it.",
@@ -246,6 +249,7 @@ const textNodes = [
     ]
   },
   {
+    //BED
     id: 16,
     bkgd: "url('../../images/Bed1.png')",
     text: "You are standing next to your bed. Check...",
@@ -262,6 +266,7 @@ const textNodes = [
     ]
   },
   {
+    //TOP OF BED
     id: 17,
     bkgd: "url('../../images/Bed1.png')",
     text: "You decide to revisit the area that you were just earlier lying upon to see if you overlooked any other useful items. Unfortunately, it seems that the candle was the only relevant item, as the rest of the various objects splayed across the messy sheets are either broken or functionally worthless.",
@@ -273,6 +278,7 @@ const textNodes = [
     ]
   },
   {
+    //UNDER THE BED pt. 1
     id: 18,
     bkgd: "url('../../images/blackBG.png')",
     text: "You crouch down to view the floorboards obscured by the bed. You scan around, but nothing catches your eye. As you move to stretch back up, you notice a faintly glowing paper firmly lodged in the corner of the bed. The only way to get to it would be to crawl underneath and grab it.",
@@ -284,43 +290,47 @@ const textNodes = [
     ]
   },
   {
+    //UNDER THE BED pt. 2
     id: 19,
-    bkgd: "url('../../images/blackBG.png')",
-    text: "You crouch down to view the floorboards obscured by the bed. You scan around, but nothing catches your eye. As you move to stretch back up, you notice a faintly glowing paper firmly lodged in the corner of the bed. The only way to get to it would be to crawl underneath and grab it.",
-    options: [
-      {
-        text: 'begin crawling',
-        nextText: 20
-      }
-    ]
-  },
-  {
-    id: 20,
     bkgd: "url('../../images/blackBG.png')",
     text: "You place the candle down a slight ways away from the bedframe. Taking it with you would undoubtedly burn the mattress above, and you don't want it too close to you in case you accidentally bump into it when crawling backward. Once you’ve secured the candle into a safe place, you descend lower onto your hands and knees and begin wading towards the opposite end of the bed. Soon enough, you reach the luminescent scrap of paper.",
     options: [
       {
         text: 'reach towards the paper',
-        setState: { talisman1: true },
+        nextText: 20
+      }
+    ]
+  },
+  {
+    //UNDER THE BED pt. 3
+    id: 20,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "Your hands are inches away from tugging the slip free from the clutches of the bedframe when you notice something strange. Though once again, you realize too late that it is not, in fact, a something, but a someone. The paper’s pulsating glow rhythmically illuminates the silhouette of a rotted, putrid hand. You realize now that you have found its hiding place. It takes all you willpower you can muster to stifle a scream. You " + 
+    "try to slowly crawl backward, holding onto the slightest belief that it may not have noticed you. That hope, however, quickly goes up in flames, as your eyes briefly dart upwards, you directly stare towards the entity.",
+    options: [
+      {
+        text: 'proceed',
         nextText: 21
       }
     ]
   },
   {
+    //UNDER THE BED pt. 4
     id: 21,
     bkgd: "url('../../images/blackBG.png')",
-    text: "Your hands are inches away from tugging the slip free from the clutches of the bedframe when you notice something strange. Though once again, you realize too late that it is not, in fact, a something, but a someone. The paper’s pulsating glow rhythmically illuminates the silhouette of a rotted, putrid hand. You realize now that you have found its hiding place. It takes all you willpower you can muster to stifle a scream. You " + 
-    "try to slowly crawl backward, holding onto the slightest belief that it may not have noticed you. That hope, however, quickly goes up in flames, as your eyes briefly dart upwards, you directly stare towards the entity." + 
+    text:  
     "You shut your eyes, the horror of the visage you briefly witnessed being so severe that it has reverted you to an utterly absurd and childlike defense mechanism, that maybe if you can't see it, then it can't see you. You’d be able to find humor in the vanity in such a strategy if you weren't so utterly terrified. Whatever you saw, even if it was only for the briefest of moments, was something that does not belong, something that should " + 
     "not be. You crawl as furiously as possible, even though it only took a few seconds to reach the slip, it feels as though it's taken hours to get out from underneath the bed. You feel your legs buckling from underneath you. The underside of the bed frame feels as if it's closing inwards, concaving in so as to sandwich you in between it and the hard floorboards. Your elbows are now scraping against the floor, and the top of your head is bumping against the frame.",
     options: [
       {
         text: 'push harder',
+        setState: { talisman1: true },
         nextText: 22
       }
     ]
   },
   {
+    //UNDER THE BED pt. 5
     id: 22,
     bkgd: "url('../../images/blackBG.png')",
     text: "You give yourself one final push, and at long last find yourself free from what seemed to be your impending tomb. Though you initially dread that the “beast” may still be chasing you, your fears are assuaged once you realize that the bedframe has fully cemented itself onto the floor. Whatever was under there couldn’t possibly get out now. Though battered and bruised, the fact that you have triumphed over such an ordeal has left you with a rush of confidence, and your recovery of the slip of paper, which you now recognize must be one of the talismans, ignites a spark of hope that you hadn't yet felt since you arrived in this cursed nightmare.",
@@ -333,6 +343,7 @@ const textNodes = [
     ]
   },
   {
+    //AFTER TALISMAN #1 - DOOR
     id: 23,
     bkgd: "url('../../images/bedroom.png')",
     text: "As you move to return to the center of your bedroom, you hear the faint sound of a key turning into place, coming from the direction of the doorway, perhaps it would be best to check it out?",
@@ -344,6 +355,7 @@ const textNodes = [
     ]
   },
   {
+    //DOOR pt. 2
     id: 24,
     bkgd: "url('../../images/blackBG.png')",
     text: "You step towards the entranceway to your bedroom. To your surprise, the door is wide open, allowing you to access the other parts of your apartment that you were unable to before.",
@@ -402,6 +414,7 @@ const textNodes = [
     ]
   },
   {
+    //cabinet pt. 2
     id: 31,
     bkgd: "url('../../images/medicine.png')",
     text: "The majority of the bottle’s label is scratched out to the point of  illegibility. You can only just barely make out the name of the drug, clozapine. The bottle itself contains no medication, in its place, hinstead, what appears to be a folded piece of paper, with a faintly glowing inscription.",
@@ -413,6 +426,7 @@ const textNodes = [
     ]
   },
   {
+    //cabinet pt. 3
     id: 32,
     bkgd: "url('../../images/medicine.png')",
     text: "You open the bottle and reach for the contents within. As soon as your fingers make contact with the slip, you feel a sharp, squirming sensation slither course from your fingertips all the way to your head. The excruciating pain nearly causes you to collapse. You try to focus on the talisman, hoping desperately that it will provide you with some small salvation similar to how it did before. However, the talisman appears to be changing before your eyes, as the iridescent glow of the mark morphs into dull, crimson-tinted etchings so crude that they can barely be made out as words. Your head is splitting, and you feel like it’s only a matter of moments until you’ll slip out of consciousness entirely.",
@@ -424,6 +438,7 @@ const textNodes = [
     ]
   },
   {
+    //cabinet pt. 4
     id: 33,
     bkgd: "url('../../images/blackBG.png')",
     text: "BREAKING: MURDER IN NEWLY BUILT APARTMENT COMPLEX\n" + 
@@ -438,6 +453,7 @@ const textNodes = [
     ]
   },
   {
+    //cabinet pt. 5
     id: 34,
     bkgd: "url('../../images/medicine.png')",
     text: "As soon as you finish reading the excerpt, the intense pain recedes, and the talisman once again takes a form similar to one found in the bedroom. Taking a quick moment to gather your bearings, you set off to explore the rest of the bathroom, though the contents of the excerpt repeatedly run through your head.",
@@ -457,7 +473,7 @@ const textNodes = [
     ]
   },
   {
-    //main options
+    //bathroom main options
     id: 35,
     bkgd: "url('../../images/bathroom.png')",
     text: "You return to the bathroom entrance, and start searching the...",
@@ -493,6 +509,7 @@ const textNodes = [
     ]
   },
   {
+    //Shower pt. 2
     id: 36,
     bkgd: "url('../../images/blackBG.png')",
     text: "You attempt to open the curtain so that you can step into the shower, but it doesn’t budge. Fortunately, there is a tear close enough to the drain to where the talisman could just barely be reached if you were to extend your arm through. " + 
@@ -509,6 +526,7 @@ const textNodes = [
     ]
   },
   {
+    //shower pt. 3
     id: 37,
     bkgd: "url('../../images/blackBG.png')",
     text: "You pull your arm back as hard as you can, but to no avail. You try to take a brief moment to pause and catch your breath, but as soon as you relieve some exertion from your arm, your entire body lurches towards the shower. You slam against the curtain, " + 
@@ -555,14 +573,139 @@ const textNodes = [
     ]
   },
   {
-    //AFTER TALISMAN 2 and 3
+    //AFTER TALISMAN 2 and 3 - proceed to kitchen scene
     id: 38,
     bkgd: "url('../../images/blackBG.png')",
     text: "As you move to return to the entrance of the bathroom, you see a vivid shimmering of light coming from the direction of the kitchen. Perhaps it would be best to return towards the hallway",
     options: [
       {
+        text: 'proceed',
+        nextText: 39,
+      }
+    ]
+  },
+  {
+    //start of Kitchen Exploration
+    id: 39,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "You exit the bathroom to find that the fog that blocked your view previously has been cleared around the kitchen.",
+    options: [
+      {
+        text: 'proceed',
+        nextText: 40,
+      }
+    ]
+  },
+  {
+    //main options
+    id: 40,
+    bkgd: "url('../../images/kitchen.png')",
+    text: "you search for the remaining items left for the ritual by checking...",
+    options: [
+      {
+        text: 'knife block',
+        nextText: 41
+      },
+      {
+        text: 'cabinet',
+        nextText: 44
+      },
+      {
+        text: 'fridge',
+        nextText: 45
+      }
+    ]
+  },
+  {
+    //knife block
+    id: 41,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "You checked the knife block and noticed several missing from their slots. There were tiny amounts of blood splattered across the block.",
+    options: [
+      {
+        text: 'pull one out',
+        nextText: 42,
+      }
+    ]
+  },
+  {
+    //knife block pt. 2
+    id: 42,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "You slid one of the remaining ones out to find something scribbled across its blade in a dark red liquid that appears to be dried blood.",
+    options: [
+      {
+        text: 'Examine the words',
+        setState: {incantation1: true},
+        nextText: 43,
+      }
+    ]
+  },
+  {
+    //knife block pt. 3
+    id: 43,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "You brought it closer to you, trying to make out the tiny words written.\n\n" +
+    "In nomine Magni Dei Nostri Satanas. Introibo ad altare Domini Inferi.\n\n" +
+    "After reciting the words out loud, your head begins to throb uncontrollably. The words resounded in your mind like someone is whispering the sentences continuously in both your ears. This is the devil’s chant–there is no mistaking it, it must be the incantation. The excruciating " + 
+    "headache lasted for a few more seconds before subsiding along with the voices.",
+    options: [
+      {
         text: 'return',
-        nextText: 100,
+        requiredState: (currentState) => (!currentState.bowl),
+        nextText: 40
+      },
+      {
+        text: 'return',
+        requiredState: (currentState) => (currentState.bowl),
+        nextText: 46
+      }
+    ]
+  },
+  {
+    //cabinet
+    id: 44,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "You remembered the bowl you needed for the ritual. You looked through the cabinet to find a large metal bowl. When you picked it up, however, an image flashed before your eyes. It was only for a split second, but you can make out the large figure of a man. You turn around and the images begin to flash again but " + 
+    "more rapidly this time in one continuous progression of scenes. You see the man again, but he was in an angry rampage in the same kitchen you were standing in. He was throwing knives, plates, and anything he could get his hands at the frightened woman curled up on the ground before him. Bits and pieces of shattered plates " + 
+    "and bowls were scattered all around. You watched the woman shivering on the ground in tears before you, a stream of blood trickling down from a large blow on her head down her face. There was blood everywhere. On the countertops, the floor, the cabinets like you were witnessing a murder take place. The images stopped abruptly, " + 
+    "replaced by the bowl that you had grabbed from the cabinet.",
+    options: [
+      {
+        text: 'return',
+        setState: {bowl: true},
+        requiredState: (currentState) => (!currentState.incantation1),
+        nextText: 40,
+      },
+      {
+        text: 'return',
+        setState: {bowl: true},
+        requiredState: (currentState) => (currentState.incantation1),
+        nextText: 46
+      }
+    ]
+  },
+  {
+    //FRIDGE
+    id: 45,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "You looked inside your fridge. There was nothing in there other than a few bottles of water and some fruits your mom dropped off the other day. There doesn’t seem to be anything of interest here. ",
+    options: [
+      {
+        text: 'return',
+        nextText: 40,
+      }
+    ]
+  },
+  {
+    //after collecting bowl and incantation #1 -  proceed to dining scene
+    id: 46,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "Across the kitchen in the dining area, you see a small flicker of light in the midst of the fog.",
+    options: [
+      {
+        text: 'proceed',
+        nextText: 47,
       }
     ]
   },
@@ -579,7 +722,7 @@ const textNodes = [
     ]
   },
   {
-    //place holder
+    //placeholder
     id: 101, //ending 2
     bkgd: "url('../../images/.png')",
     text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
