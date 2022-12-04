@@ -48,7 +48,7 @@ const textNodes = [
     text: 'You struggle to keep your eyes open as you fumble through your keychain. The semester has only just begun, and yet you already feel as if you are drowning in assignments. You have spent the entirety of the past few days attending lectures while juggling project meetings, and it is beginning to take its toll. You are overwhelmed with an insurmountable feeling of exhaustion, worsened by the fact that you have not been able to get a wink of sleep ever since…*click*. The weighty sound of a key turning into a lock interrupts your line of thought, replacing them with an intense feeling of relief. Finally, you can rest for the day. You stifle a yawn as you pull open the door. Not wanting to spend any second longer standing in the cold, dimly-lit hallway, you step into the dark entrance of your new home, apartment 404.',
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 2
       }
     ]
@@ -59,7 +59,7 @@ const textNodes = [
     text: 'It was only a few days ago that you found yourself in a state of complete panic. The starting date for the semester was inching closer and closer, but you had yet to find any living accommodations for the upcoming school months. It was not until you were at the end of your rope, having already come up short after contacting friends and apartment agencies, that you stumbled upon an ad for an apartment in a complex nearby the school. Though the apartment was aged in its appearance, the price was affordable enough, and the lack of any other option made it an attractive deal regardless of any “quirks” it might possess. At least, that’s what you believed until it came time to move in. ',
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 3
       }
     ]
@@ -70,7 +70,7 @@ const textNodes = [
     text: ' You flick on the light switch as you step into the apartment for what now marks the 4th night since you took residence. The lights sputter on, and you are greeted with the same, now familiar sights of the furnishings of your home. One thing that you took for a surprise upon your visit to the apartment was its size, appearing much larger on the inside than one would initially surmise given the layout of the complex. Though you appreciated all the space, you didn’t particularly enjoy having to spend the first two days performing a full sweep of it. It was obvious that no one had lived in the apartment for a very long time, as every inch of the kitchen, bathroom, and bedroom was caked with dust. Fortunately, this dire state of disrepair did not extend to the water and electricity, though a few of the light fixtures were emitting a dull, buzzing sound, and flickered constantly. You were planning on calling an electrician today to fix them, but it’s much too late now. For now, all you want to do is reach your bed and finally get some rest.',
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 4
       }
     ]
@@ -81,7 +81,7 @@ const textNodes = [
     text: 'Having found your way into the bedroom, you jump onto the mattress, rapidly enveloping yourself within the bed sheets with one final burst of energy.  Fully, utterly exhausted, you steadily close your eyes, and slowly, gradually, gently drift into sleep.',
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 5
       }
     ]
@@ -92,7 +92,7 @@ const textNodes = [
     text: '*Tick-tock* *tick-tock* *tick-tock*',
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 6
       }
     ]
@@ -103,7 +103,7 @@ const textNodes = [
     text: 'Your eyes shoot open, and your body darts up, launching the bedsheets in tandem.  Though you are still lethargic, your feelings of exhaustion have subsided, due to a much more intense feeling of frustration taking its place. It’s the fourth night since you first started living here, and subsequently, it is the fourth night in a row that you haven’t been able to get any sleep. All because of the infernal chiming of the contemplable clockwork contraption. You’ve tried everything, music, earplugs, but none of it has worked, and the sound of the clock still bleeds through. Worst of all, you can’t find the damn thing anywhere in your apartment, meaning that it must be from a neighboring tenant. Well, today was the last straw, you plan on storming up to the floor above to give the tenant above a piece of your mind, that is, until, you notice a peculiar-looking envelope sitting atop your nightstand. One that you are certain wasn’t there before.',
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 7
       }
     ]
@@ -114,7 +114,7 @@ const textNodes = [
     text: 'You flick on the lamp residing on the nightstand, then pick up the letter. The envelope has remarkable features, in fact, it is completely blank, save for a deep, crimson-red seal that is holding it together. After a brief struggle, you manage to wrangle the letter from its paper shell. As you start to read its contents, you feel an unnerving chill tinge throughout your body. ',
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 8
       }
     ]
@@ -139,7 +139,7 @@ const textNodes = [
     ,
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 9
       }
     ]
@@ -150,7 +150,7 @@ const textNodes = [
     text: 'Before you even have the ability to fully process your bewilderment at the letter’s content, the lamp abruptly cuts off. Not long after, the entire apartment begins to shake violently, as if being uprooted from the earth itself. Your head feels like it is about to explode as the sounds of furniture falling and silverware crashing amplify throughout the apartment. Right when you feel as though you’re about to fall apart, it all comes to a complete stop. The sound of the apartment collapsing in on itself has vanished. Silence permeates throughout the pitch-black room. The irritation that was fueling your movements only moments ago has now once again been replaced by an even greater sense. Complete and utter fear.',
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 10
       }
     ]
@@ -162,7 +162,7 @@ const textNodes = [
     text: 'Your eyes are wide awake in terror, and you feel your body shivering, not from the cold, but from instinct. Every fiber of your being is telling you to stay awake because deep down, it knows that something is out there, and it knows that it’s a threat.',
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 11
       }
     ]
@@ -174,7 +174,7 @@ const textNodes = [
     "As you reach for the light switch, you feel your hand rub against something. Scratch that, it wasn’t something, it was someone. What your hand briefly brushed was cold, rigid, and worn, but it was unmistakably living. Your mind, already on the defensive, goes into full panic mode You quickly retract your arm with such ferocity that it brings the contents on top of the nightstand along with it. The various trinkets and accessories now splayed across your bed, though there is one that you don't seem to recall having been there before.",
     options: [
       {
-        text: 'Pick up candle',
+        text: 'pick up candle',
         nextText: 12
       }
     ]
@@ -186,15 +186,15 @@ const textNodes = [
     '\n Begin searching...',
     options: [
       {
-        text: 'The Desk',
+        text: 'the desk',
         nextText: 14
       },
       {
-        text: 'The Door',
+        text: 'the door',
         nextText: 15
       },
       {
-        text: 'The Bed',
+        text: 'the bed',
         nextText: 16
       },
 
@@ -207,15 +207,15 @@ const textNodes = [
     text: 'You move back to the center of your bedroom to survey the area around you.',
     options: [
       {
-        text: 'The Desk',
+        text: 'the desk',
         nextText: 14
       },
       {
-        text: 'The Door',
+        text: 'the door',
         nextText: 15
       },
       {
-        text: 'The Bed',
+        text: 'the bed',
         nextText: 16
       },
 
@@ -309,7 +309,7 @@ const textNodes = [
     "try to slowly crawl backward, holding onto the slightest belief that it may not have noticed you. That hope, however, quickly goes up in flames, as your eyes briefly dart upwards, you directly stare towards the entity.",
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 21
       }
     ]
@@ -361,7 +361,7 @@ const textNodes = [
     text: "You step towards the entranceway to your bedroom. To your surprise, the door is wide open, allowing you to access the other parts of your apartment that you were unable to before.",
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 25
       }
     ]
@@ -373,7 +373,7 @@ const textNodes = [
     text: "You exit your bedroom and find yourself in the main hallway of your apartment, however, you are quickly cut off from proceeding any further by a pulsating shroud of fog, which has entirely blocked off the entranceway to the kitchen, and by extension, the rest of the apartment. Perhaps you need to search elsewhere in the apartment to open the way forward. Currently, the only other room currently available to you is the bathroom.",
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 26
       }
     ]
@@ -420,7 +420,7 @@ const textNodes = [
     text: "The majority of the bottle’s label is scratched out to the point of  illegibility. You can only just barely make out the name of the drug, clozapine. The bottle itself contains no medication, in its place, hinstead, what appears to be a folded piece of paper, with a faintly glowing inscription.",
     options: [
       {
-        text: 'Open the bottle',
+        text: 'open the bottle',
         nextText: 32
       }
     ]
@@ -446,7 +446,7 @@ const textNodes = [
     "At the time of this report, **, the husband of the victim, has been apprehended and is currently being interrogated. **, aged 33, has had prior reports of domestic abuse, and it is currently believed that the assailant was experiencing a severe schizophrenic attack , which led him to lash out and ultimately fatally injure his partner.",
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         setState: {talisman2: true},
         nextText: 34,
       }
@@ -479,10 +479,12 @@ const textNodes = [
     text: "You return to the bathroom entrance, and start searching the...",
     options: [
       {
+        requiredState: (currentState) => (!currentState.talisman2),
         text: 'medicine cabinet',
         nextText: 27
       },
       {
+        requiredState: (currentState) => (!currentState.talisman3),
         text: 'the shower',
         nextText: 28
       },
@@ -579,7 +581,7 @@ const textNodes = [
     text: "As you move to return to the entrance of the bathroom, you see a vivid shimmering of light coming from the direction of the kitchen. Perhaps it would be best to return towards the hallway",
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 39,
       }
     ]
@@ -591,7 +593,7 @@ const textNodes = [
     text: "You exit the bathroom to find that the fog that blocked your view previously has been cleared around the kitchen.",
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 40,
       }
     ]
@@ -600,13 +602,15 @@ const textNodes = [
     //main options
     id: 40,
     bkgd: "url('../../images/kitchen.png')",
-    text: "you search for the remaining items left for the ritual by checking...",
+    text: "you search for the remaining items left for the ritual by checking the...",
     options: [
       {
+        requiredState: (currentState) => (!currentState.incantation1),
         text: 'knife block',
         nextText: 41
       },
       {
+        requiredState: (currentState) => (!currentState.bowl),
         text: 'cabinet',
         nextText: 44
       },
@@ -635,7 +639,7 @@ const textNodes = [
     text: "You slid one of the remaining ones out to find something scribbled across its blade in a dark red liquid that appears to be dried blood.",
     options: [
       {
-        text: 'Examine the words',
+        text: 'examine the words',
         setState: {incantation1: true},
         nextText: 43,
       }
@@ -704,7 +708,7 @@ const textNodes = [
     text: "Across the kitchen in the dining area, you see a small flicker of light in the midst of the fog.",
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 47,
       }
     ]
@@ -716,7 +720,7 @@ const textNodes = [
     text: "You head towards the light source illuminating the dining room, the fog slowly disappearing as you get closer. The fog in the room completely disappears once you’ve hit the edge of what appears to be the dining table. At the center sat another wax candle identical to the one you have in hand.",
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 48,
       }
     ]
@@ -728,12 +732,14 @@ const textNodes = [
     text: "You survey the dining room around you.",
     options: [
       {
-        text: 'Grab the candle',
+        requiredState: (currentState) => (!currentState.candle2),
+        text: 'grab the candle',
         setState: {candle2: true},
         nextText: 49,
       },
       {
-        text: 'Check the chairs',
+        requiredState: (currentState) => (!currentState.talisman4),
+        text: 'check the chairs',
         nextText: 50,
       }
     ]
@@ -812,7 +818,7 @@ const textNodes = [
     text: "You heard a loud crash in the living room across from you. At this point, all the fog had disappeared.",
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 54,
       },
     ]
@@ -827,7 +833,7 @@ const textNodes = [
     ,
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 55,
       },
     ]
@@ -843,7 +849,7 @@ const textNodes = [
     ,
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 56,
       },
     ]
@@ -855,11 +861,11 @@ const textNodes = [
     text: "You were just about to perform the final step of the ritual before being abruptly interrupted by a loud bang on the window beside you. Your eyes darted to the window. And there, you see her. A harrowing figure of a woman staring intensely at you through the glass. You can see her clearly now, her grotesque form and her tattered, bloodied white nightgown. She began to make a piercing cry, ringing in your ear drums. She banged louder and louder, large cracks beginning to form from the impact of each pound. You looked at the knife in hand and back at her, adrenaline rushing through your veins. You only have a few seconds to react",
     options: [
       {
-        text: 'Finish the Ritual',
+        text: 'finish the Ritual',
         nextText: 57,
       },
       {
-        text: 'Attack Her with the Knife',
+        text: 'attack Her with the Knife',
         nextText: 65,
       },
     ]
@@ -871,7 +877,7 @@ const textNodes = [
     text: "Intent on not letting anything distract you from completing the ritual, you hurriedly slit your fingertip with the knife’s edge. As you go to move your fingertips above the basin, you hear the abrasive sound of glass shattering. She is coming, you don’t have much time left. You frantically try to squeeze your fingertip together, doing anything to make the blood trickle faster. The woman, temporarily impeded by falling through the window and wading through shards of glass, is now hurtling towards you. She is yards, feet, inches away. She is here. You close your eyes, and brace for what you believe to be your inevitable demise.A cold chill briefly embraces your entire body, until suddenly, you are overwhelmed by a radiant flash of white light",
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 58,
       },
     ]
@@ -883,7 +889,7 @@ const textNodes = [
     text: "Your eyes open as they are greeted by the blinding rays of the rising dawn. You’re lying in your bed, and it appears that morning has arisen. You slovenly get out of bed, until a cold sweat begins to run down your back as you recall the events of last night. You race around the apartment, checking each and every last room for signs of the nightmare , but no evidence of the horrors you experienced can be found.",
     options: [
       {
-        text: 'Perhaps it was all just a bad dream?',
+        text: 'perhaps it was all just a bad dream?',
         nextText: 59,
       },
     ]
@@ -895,7 +901,7 @@ const textNodes = [
     text: "You breathe a heavy sigh of relief as you go back to your daily routine of preparing for the day. Perhaps the lack of sleep has led to delusions? You notice that your usual tiredness has completely evaporated. For the first time since you've arrived at the apartment, you finally feel well-rested and refreshed. You finish your preparations for the day, and open your entranceway door with newfound vigor. You move with such a rush that you almost fail to notice the elderly woman standing just outside the doorway, only narrowly avoiding a full-on collision.",
     options: [
       {
-        text: 'Can I help you with anything?',
+        text: 'can I help you with anything?',
         nextText: 60,
       },
     ]
@@ -907,7 +913,7 @@ const textNodes = [
     text: "“I leave my assistant in charge for a week, and they leave me with a month's worth of problems.” The old lady grumbles, you aren’t quite sure whats shes referring to, but shes clearly in a foul mood. “Sorry for the inconvenience and all that, but you’re going to need to move out of this apartment, effective immediately.”",
     options: [
       {
-        text: 'Excuse me? What are you talking about?',
+        text: 'excuse me? What are you talking about?',
         nextText: 61,
       },
     ]
@@ -919,7 +925,7 @@ const textNodes = [
     text: "““Listen kid, we could go through the nitty-gritty of the situation, sit here recanting ghost stories about this room, then deal with the hours of paperwork and NDAs afterwards, '' the elderly woman continues. “Or, I can give you a full reimbursement, give you one of the top floor suites free of charge, and we can both carry along like nothing ever happened.”",
     options: [
       {
-        text: 'You stand there, unable to speak, utterly bewildered by the old woman, who you now presume to be the landlady of the complex.',
+        text: 'you stand there, unable to speak, utterly bewildered by the old woman, who you now presume to be the landlady of the complex.',
         nextText: 62,
       },
     ]
@@ -931,7 +937,7 @@ const textNodes = [
     text: "“I’ll take the silence as acceptance of my latter proposition”. The landlady grins, it's clear this isn’t the first time she's had to employ such tactics. “I’ll send someone to help you pack your things and show you to your new room. The whole process shouldn't even take thirty minutes.” With that remark, the old lady begins walking away. You try to voice some concern, but are drowned out by her voice, which now seems to be scolding the aforementioned “assistant” over the phone.",
     options: [
       {
-        text: 'You close the door and shuffle back into your apartment',
+        text: 'you close the door and shuffle back into your apartment',
         nextText: 63,
       },
     ]
@@ -943,7 +949,7 @@ const textNodes = [
     text: "The cold sweat you experienced this morning has returned, and you feel your chest tighten. Though the landlady was vague, you feel as though whatever “ghost stories” the old lady was referring to must have some connection with the strange nightmare you experienced the night prior. You try to shrug it off, and begin moving back to your bedroom to begin packing up and moving out. You barely make it through the doorway when your heart sinks into the deepest recesses of your chest.",
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 64,
       },
     ]
@@ -967,7 +973,7 @@ const textNodes = [
     text: "With each successive bang, the window begins to disintegrate. You quickly grabbed the knife in hand and thought of only one thing to do at this moment. When the last support of the window was destroyed, you charged at her at full force, ready to plunge the knife deep inside her. She bursted through, the impact of the explosion throwing you backwards. You tried to regain your balance but as soon as you were able to adjust yourself, all you see in your vision is the horrific face of the woman inches from you. She let out another loud cry, one of intense agony and pain. Your head begins to spin violently and your senses become num. You tried swinging the knife at her, but you couldn’t move a muscle almost as if you were paralyzed. Your vision begins to blur, the face of the woman slowly disappearing in a black fog. You felt a sharp pain in your lower abdomen and the image of the woman plunging a knife deep inside it. Your senses slowly begin to disappear as you lie there in the pool of your own blood as she continuously stabs deep inside you until you couldn’t feel the pain anymore. Eventually, as you lay there helpless, your vision engulfs in complete darkness.",
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 66,
       },
     ]
@@ -982,7 +988,7 @@ const textNodes = [
     , 
     options: [
       {
-        text: 'Pick up the phone',
+        text: 'pick up the phone',
         nextText: 67,
       },
     ]
@@ -996,7 +1002,7 @@ const textNodes = [
     , 
     options: [
       {
-        text: 'Jump from where?',
+        text: 'jump from where?',
         nextText: 68,
       },
     ]
@@ -1009,7 +1015,7 @@ const textNodes = [
     
     options: [
       {
-        text: 'Arrive at the scene',
+        text: 'arrive at the scene',
         nextText: 69,
       },
     ]
@@ -1022,7 +1028,7 @@ const textNodes = [
     
     options: [
       {
-        text: 'Proceed',
+        text: 'proceed',
         nextText: 70,
       },
     ]
