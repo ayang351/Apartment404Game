@@ -309,7 +309,7 @@ const textNodes = [
     "try to slowly crawl backward, holding onto the slightest belief that it may not have noticed you. That hope, however, quickly goes up in flames, as your eyes briefly dart upwards, you directly stare towards the entity.",
     options: [
       {
-        text: 'proceed',
+        text: 'Proceed',
         nextText: 21
       }
     ]
@@ -361,7 +361,7 @@ const textNodes = [
     text: "You step towards the entranceway to your bedroom. To your surprise, the door is wide open, allowing you to access the other parts of your apartment that you were unable to before.",
     options: [
       {
-        text: 'proceed',
+        text: 'Proceed',
         nextText: 25
       }
     ]
@@ -373,7 +373,7 @@ const textNodes = [
     text: "You exit your bedroom and find yourself in the main hallway of your apartment, however, you are quickly cut off from proceeding any further by a pulsating shroud of fog, which has entirely blocked off the entranceway to the kitchen, and by extension, the rest of the apartment. Perhaps you need to search elsewhere in the apartment to open the way forward. Currently, the only other room currently available to you is the bathroom.",
     options: [
       {
-        text: 'proceed',
+        text: 'Proceed',
         nextText: 26
       }
     ]
@@ -446,7 +446,7 @@ const textNodes = [
     "At the time of this report, **, the husband of the victim, has been apprehended and is currently being interrogated. **, aged 33, has had prior reports of domestic abuse, and it is currently believed that the assailant was experiencing a severe schizophrenic attack , which led him to lash out and ultimately fatally injure his partner.",
     options: [
       {
-        text: 'proceed',
+        text: 'Proceed',
         setState: {talisman2: true},
         nextText: 34,
       }
@@ -579,7 +579,7 @@ const textNodes = [
     text: "As you move to return to the entrance of the bathroom, you see a vivid shimmering of light coming from the direction of the kitchen. Perhaps it would be best to return towards the hallway",
     options: [
       {
-        text: 'proceed',
+        text: 'Proceed',
         nextText: 39,
       }
     ]
@@ -591,7 +591,7 @@ const textNodes = [
     text: "You exit the bathroom to find that the fog that blocked your view previously has been cleared around the kitchen.",
     options: [
       {
-        text: 'proceed',
+        text: 'Proceed',
         nextText: 40,
       }
     ]
@@ -704,35 +704,348 @@ const textNodes = [
     text: "Across the kitchen in the dining area, you see a small flicker of light in the midst of the fog.",
     options: [
       {
-        text: 'proceed',
+        text: 'Proceed',
         nextText: 47,
       }
     ]
   },
   {
-    //placeholder 
-    id: 100, //ending 1
-    bkgd: "url('../../images/.png')",
-    text: 'The monster laughed as you hid behind your shield and ate you.',
+    //Entering the Dining Room
+    id: 47,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "You head towards the light source illuminating the dining room, the fog slowly disappearing as you get closer. The fog in the room completely disappears once you’ve hit the edge of what appears to be the dining table. At the center sat another wax candle identical to the one you have in hand.",
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: 'Proceed',
+        nextText: 48,
       }
     ]
   },
   {
-    //placeholder
-    id: 101, //ending 2
-    bkgd: "url('../../images/.png')",
-    text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+    //Dining Room Exploration
+    id: 48,
+    bkgd: "url('../../images/diningTable.png')",
+    text: "You survey the dining room around you.",
     options: [
       {
-        text: 'Congratulations. Play Again.',
-        nextText: -1
+        text: 'Grab the candle',
+        setState: {candle2: true},
+        nextText: 49,
+      },
+      {
+        text: 'Check the chairs',
+        nextText: 50,
       }
     ]
-  }
+  },
+  {
+    // grabbing the candle
+    id: 49,
+    bkgd: "url('../../images/waxCandle2.png')",
+    text: "You grabbed the candle, but once it was in hand, images started to flash again. You see the same man and woman from before, but this time, they were sitting down peacefully here in the same dining room. The man wasn’t in an angry rampage like he was before, instead, he was peacefully dining with the same woman he attacked. They both wore a happy expression on their faces like a happily married couple, nothing like the angry and terrified looks of what you’ve seen before. The scene ends abruptly again, replaced by a loud crash of the dining table plunged to the ground in pieces",
+    options: [
+      {
+        text: 'return',
+        requiredState: (currentState) => (!currentState.talisman4),
+        nextText: 48,
+      },
+      {
+        //if talisman 4 already collected
+        text: 'return',
+        requiredState: (currentState) => (currentState.talisman4),
+        nextText: 53,
+      },
+    ]
+  },
+  {
+    // checking the chairs
+    id: 50,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "There are two chairs by the dining table.",
+    options: [
+      {
+        text: 'chair 1',
+        nextText: 51,
+      },
+      {
+        text: 'chair 2',
+        setState: {talisman4:true},
+        nextText: 52,
+      }
+    ]
+  },
+  {
+    // checking chair 1
+    id: 51,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "There was nothing on or under this chair",
+    options: [
+      {
+        text: 'return',
+        nextText: 50,
+      },
+    ]
+  },
+  {
+    // checking chair 2
+    id: 52,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "There was nothing on this chair but there was a small slip of paper stuck to the underside of the chair. As you crouched down to get a closer look, it was another talisman, the last one you need to complete the ritual. As you peel it off, a gut-wrenching scream of a woman tears through the dining room. Still in shock, you proceeded to peel off the talisman thinking that the screaming will stop once you get it all off. Contrary to your expectations though, it only got louder and louder, turning into a piercing screech until you were able to tear the whole thing off. With the 4th talisman in hand, the screaming stopped, returning back to the eerie silence of your apartment.",
+    options: [
+      {
+        text: 'return',
+        requiredState: (currentState) => (!currentState.candle2),
+        nextText: 48,
+      },
+      {
+        //if candle 2 already collected
+        text: 'return',
+        requiredState: (currentState) => (currentState.candle2),
+        nextText: 53,
+      },
+    ]
+  },
+  {
+    // once talisman #4 and candle #2 collected, transition scene
+    id: 53,
+    bkgd: "url('../../images/diningTable.png')",
+    text: "You heard a loud crash in the living room across from you. At this point, all the fog had disappeared.",
+    options: [
+      {
+        text: 'Proceed',
+        nextText: 54,
+      },
+    ]
+  },
+  {
+    // entering living room
+    id: 54,
+    bkgd: "url('../../images/livingRoom.png')",
+    text: 'Once you walked into the living room, you were instantly greeted with a wall caked with blood all across it. You stepped closer, trying to get the shape of the large red letters. \n' +
+    'Ad eum qui laefificat meum \n' +
+    'It was incomprehensible, but you knew it had to be the second half of the chant you must recite for the ritual. The room begins to shake violently like before for a brief second. Now that you have everything that you needed for the ritual, it was now finally time to free yourself from this wretched curse. After this, everything will go back to normal…right?' 
+    ,
+    options: [
+      {
+        text: 'Proceed',
+        nextText: 55,
+      },
+    ]
+  },
+  {
+    // start living room ritual
+    id: 55,
+    bkgd: "url('../../images/livingRoom.png')",
+    text: 'You followed the steps for the ritual closely in order just like it was written in the letter. First, you set down the two candles on the table in front of you, one candle on each end. You placed the bowl in the center. On each corner of the table, you placed one talisman. Now for the chant, you closely follow the words on the knife and what’s smeared on the walls one by one, making sure that you make no mistakes. \n' +
+    'In nomine Magni Dei Nostri Satanas. Introibo ad altare Domini Inferi.  \n' +
+    'Ad eum qui laefificat meum. \n' +
+    'You recite the incantation four times.' 
+    ,
+    options: [
+      {
+        text: 'Proceed',
+        nextText: 56,
+      },
+    ]
+  },
+  {
+    // living room ritual pt 2
+    id: 56,
+    bkgd: "url('../../images/Window.png')",
+    text: "You were just about to perform the final step of the ritual before being abruptly interrupted by a loud bang on the window beside you. Your eyes darted to the window. And there, you see her. A harrowing figure of a woman staring intensely at you through the glass. You can see her clearly now, her grotesque form and her tattered, bloodied white nightgown. She began to make a piercing cry, ringing in your ear drums. She banged louder and louder, large cracks beginning to form from the impact of each pound. You looked at the knife in hand and back at her, adrenaline rushing through your veins. You only have a few seconds to react",
+    options: [
+      {
+        text: 'Finish the Ritual',
+        nextText: 57,
+      },
+      {
+        text: 'Attack Her with the Knife',
+        nextText: 65,
+      },
+    ]
+  },
+  {
+    // start of ending 1
+    id: 57,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "Intent on not letting anything distract you from completing the ritual, you hurriedly slit your fingertip with the knife’s edge. As you go to move your fingertips above the basin, you hear the abrasive sound of glass shattering. She is coming, you don’t have much time left. You frantically try to squeeze your fingertip together, doing anything to make the blood trickle faster. The woman, temporarily impeded by falling through the window and wading through shards of glass, is now hurtling towards you. She is yards, feet, inches away. She is here. You close your eyes, and brace for what you believe to be your inevitable demise.A cold chill briefly embraces your entire body, until suddenly, you are overwhelmed by a radiant flash of white light",
+    options: [
+      {
+        text: 'Proceed',
+        nextText: 58,
+      },
+    ]
+  },
+  {
+    // ending 1 pt2
+    id: 58,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "Your eyes open as they are greeted by the blinding rays of the rising dawn. You’re lying in your bed, and it appears that morning has arisen. You slovenly get out of bed, until a cold sweat begins to run down your back as you recall the events of last night. You race around the apartment, checking each and every last room for signs of the nightmare , but no evidence of the horrors you experienced can be found.",
+    options: [
+      {
+        text: 'Perhaps it was all just a bad dream?',
+        nextText: 59,
+      },
+    ]
+  },
+  {
+    // ending 1 pt3
+    id: 59,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "You breathe a heavy sigh of relief as you go back to your daily routine of preparing for the day. Perhaps the lack of sleep has led to delusions? You notice that your usual tiredness has completely evaporated. For the first time since you've arrived at the apartment, you finally feel well-rested and refreshed. You finish your preparations for the day, and open your entranceway door with newfound vigor. You move with such a rush that you almost fail to notice the elderly woman standing just outside the doorway, only narrowly avoiding a full-on collision.",
+    options: [
+      {
+        text: 'Can I help you with anything?',
+        nextText: 60,
+      },
+    ]
+  },
+  {
+    // ending 1 pt4
+    id: 60,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "“I leave my assistant in charge for a week, and they leave me with a month's worth of problems.” The old lady grumbles, you aren’t quite sure whats shes referring to, but shes clearly in a foul mood. “Sorry for the inconvenience and all that, but you’re going to need to move out of this apartment, effective immediately.”",
+    options: [
+      {
+        text: 'Excuse me? What are you talking about?',
+        nextText: 61,
+      },
+    ]
+  },
+  {
+    // ending 1 pt5
+    id: 61,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "““Listen kid, we could go through the nitty-gritty of the situation, sit here recanting ghost stories about this room, then deal with the hours of paperwork and NDAs afterwards, '' the elderly woman continues. “Or, I can give you a full reimbursement, give you one of the top floor suites free of charge, and we can both carry along like nothing ever happened.”",
+    options: [
+      {
+        text: 'You stand there, unable to speak, utterly bewildered by the old woman, who you now presume to be the landlady of the complex.',
+        nextText: 62,
+      },
+    ]
+  },
+  {
+    // ending 1 pt6
+    id: 62,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "“I’ll take the silence as acceptance of my latter proposition”. The landlady grins, it's clear this isn’t the first time she's had to employ such tactics. “I’ll send someone to help you pack your things and show you to your new room. The whole process shouldn't even take thirty minutes.” With that remark, the old lady begins walking away. You try to voice some concern, but are drowned out by her voice, which now seems to be scolding the aforementioned “assistant” over the phone.",
+    options: [
+      {
+        text: 'You close the door and shuffle back into your apartment',
+        nextText: 63,
+      },
+    ]
+  },
+  {
+    // ending 1 pt7
+    id: 63,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "The cold sweat you experienced this morning has returned, and you feel your chest tighten. Though the landlady was vague, you feel as though whatever “ghost stories” the old lady was referring to must have some connection with the strange nightmare you experienced the night prior. You try to shrug it off, and begin moving back to your bedroom to begin packing up and moving out. You barely make it through the doorway when your heart sinks into the deepest recesses of your chest.",
+    options: [
+      {
+        text: 'Proceed',
+        nextText: 64,
+      },
+    ]
+  },
+  {
+    // ending 1 pt8
+    id: 64,
+    bkgd: "url('../../images/envelope.png')",
+    text: "Sitting there, on the nightstand right next to the bed, is a plain, white envelope. Completely unremarkable in nearly all aspects, save for a deep, crimson-red seal.",
+    options: [
+      {
+        text: 'The End?',
+        nextText: -1,
+      },
+    ]
+  },
+  {
+    // start of ending 2
+    id: 65,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "With each successive bang, the window begins to disintegrate. You quickly grabbed the knife in hand and thought of only one thing to do at this moment. When the last support of the window was destroyed, you charged at her at full force, ready to plunge the knife deep inside her. She bursted through, the impact of the explosion throwing you backwards. You tried to regain your balance but as soon as you were able to adjust yourself, all you see in your vision is the horrific face of the woman inches from you. She let out another loud cry, one of intense agony and pain. Your head begins to spin violently and your senses become num. You tried swinging the knife at her, but you couldn’t move a muscle almost as if you were paralyzed. Your vision begins to blur, the face of the woman slowly disappearing in a black fog. You felt a sharp pain in your lower abdomen and the image of the woman plunging a knife deep inside it. Your senses slowly begin to disappear as you lie there in the pool of your own blood as she continuously stabs deep inside you until you couldn’t feel the pain anymore. Eventually, as you lay there helpless, your vision engulfs in complete darkness.",
+    options: [
+      {
+        text: 'Proceed',
+        nextText: 66,
+      },
+    ]
+  },
+  {
+    // ending 2 pt2
+    id: 66,
+    bkgd: "url('../../images/blackBG.png')",
+    text: '... \n' +
+    '*ring* \n' +
+    'You receive a call at 3am in the morning.'
+    , 
+    options: [
+      {
+        text: 'Pick up the phone',
+        nextText: 67,
+      },
+    ]
+  },
+  {
+    // ending 2 pt3
+    id: 67,
+    bkgd: "url('../../images/blackBG.png')",
+    text: 'You heard a frightened voice on the other line. \n' +
+    '“XXX apartment. I saw somebody jump just now. A-and he’s lying h-here on the ground. H-He’s not breathing!”'   
+    , 
+    options: [
+      {
+        text: 'Jump from where?',
+        nextText: 68,
+      },
+    ]
+  },
+  {
+    // ending 2 pt4
+    id: 68,
+    bkgd: "url('../../images/blackBG.png')",
+    text: "“His window! I-I don’t know. I just saw him smashing open his window and before I could do anything he just jumped! From the fourth floor!”",
+    
+    options: [
+      {
+        text: 'Arrive at the scene',
+        nextText: 69,
+      },
+    ]
+  },
+  {
+    // ending 2 pt5
+    id: 69,
+    bkgd: "url('../../images/ApartmentOutside.png')",
+    text: "You arrive at the scene moments after receiving that call. The ambulance had already arrived and you see a body getting carried on the stretcher. You walked over and glanced over at the lifeless form in front of you. His limbs were crushed, likely from the impact from the fall. Male, looked like a young college student. You noticed shortly after that one of his fists was clenched tightly. The other officers at the scene walked over to you to deliver the report on the case",
+    
+    options: [
+      {
+        text: 'Proceed',
+        nextText: 70,
+      },
+    ]
+  },
+  {
+    //ending 2 pt6
+    id: 70,
+    bkgd: "url('../../images/ApartmentOutside.png')",
+    text: 'Suicide, it has been declared. The security footage has confirmed that this young college student had taken his life by jumping from the window of his apartment, Apartment 404,  after only living there for 4 days. \n' +
+    'The other residents of the complex surrounded the scene, observing the incident that occurred and whispering to each other. \n' +
+    '“That apartment 404 is cursed. Not one has survived it after what had happened 30 years ago. You know, that crazy husband that killed his wife? Heard that he had schizophrenia and killed her during one of his episodes. He committed suicide after, but their souls were never put to rest” \n' +
+    '“Oh dear…not one has escaped. One resident after another, I can’t believe they’re still leasing that place…even though every resident there died from suicide.” \n' +
+    '“I guess when the price is so low, it’s hard to turn it down. But to think it was such a young boy that has fallen victim…” \n' +
+    '“I heard that some of the victims have hallucinations when living there. They would start screaming out of nowhere and when someone went to check on one of them, they would say they would see a woman, but there’s nothing there. Someone also walked in on one of them reciting this weird demonic chant in a daze. It’s almost like they were possessed. Is that part of the curse?” \n' +
+    '“It must be. Poor boy…to be taken so soon. He was cursed. The devil doesn’t show mercy on anyone.”'
+    , 
+    options: [
+      {
+        text: 'End',
+        nextText: -1,
+      },
+    ]
+  },
 ]
 
 startGame()
