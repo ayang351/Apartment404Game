@@ -5,7 +5,7 @@ let state = {}
 
 function startGame() {
   state = {}
-  showTextNode(1)
+  showTextNode(0)
 }
 
 function showTextNode(textNodeIndex) {
@@ -41,6 +41,18 @@ function selectOption(option) {
 }
 
 const textNodes = [
+  {
+    id: 0,
+    bkgd: "url('../../images/GhostReflection.png')",
+    text: 'Welcome to Apartment 404\n\n' + "This is an atmospheric text-based horror game based on the mysteries surrounding a haunted apartment where residents have reported to have experienced an odd level of paranormal events while living there. " +
+    "You are to play as the newest resident of apartment 404 that will uncover the mysteries of apartment 404.\n\n" + "tread cautiously and choose wisely",
+    options: [
+      {
+        text: 'start',
+        nextText: 1
+      }
+    ]
+  },
   //start of pre-exploration
   {
     id: 1,
@@ -66,7 +78,7 @@ const textNodes = [
   },
   {
     id: 3,
-    bkgd: "url('../../images/living room.png')",
+    bkgd: "url('../../images/livingRoom.png')",
     text: ' You flick on the light switch as you step into the apartment for what now marks the 4th night since you took residence. The lights sputter on, and you are greeted with the same, now familiar sights of the furnishings of your home. One thing that you took for a surprise upon your visit to the apartment was its size, appearing much larger on the inside than one would initially surmise given the layout of the complex. Though you appreciated all the space, you didn’t particularly enjoy having to spend the first two days performing a full sweep of it. It was obvious that no one had lived in the apartment for a very long time, as every inch of the kitchen, bathroom, and bedroom was caked with dust. Fortunately, this dire state of disrepair did not extend to the water and electricity, though a few of the light fixtures were emitting a dull, buzzing sound, and flickered constantly. You were planning on calling an electrician today to fix them, but it’s much too late now. For now, all you want to do is reach your bed and finally get some rest.',
     options: [
       {
@@ -827,8 +839,8 @@ const textNodes = [
     // entering living room
     id: 54,
     bkgd: "url('../../images/livingRoom.png')",
-    text: 'Once you walked into the living room, you were instantly greeted with a wall caked with blood all across it. You stepped closer, trying to get the shape of the large red letters. \n' +
-    'Ad eum qui laefificat meum \n' +
+    text: 'Once you walked into the living room, you were instantly greeted with a wall caked with blood all across it. You stepped closer, trying to get the shape of the large red letters.\n\n' +
+    'Ad eum qui laefificat meum \n\n' +
     'It was incomprehensible, but you knew it had to be the second half of the chant you must recite for the ritual. The room begins to shake violently like before for a brief second. Now that you have everything that you needed for the ritual, it was now finally time to free yourself from this wretched curse. After this, everything will go back to normal…right?' 
     ,
     options: [
@@ -842,9 +854,9 @@ const textNodes = [
     // start living room ritual
     id: 55,
     bkgd: "url('../../images/livingRoom.png')",
-    text: 'You followed the steps for the ritual closely in order just like it was written in the letter. First, you set down the two candles on the table in front of you, one candle on each end. You placed the bowl in the center. On each corner of the table, you placed one talisman. Now for the chant, you closely follow the words on the knife and what’s smeared on the walls one by one, making sure that you make no mistakes. \n' +
+    text: 'You followed the steps for the ritual closely in order just like it was written in the letter. First, you set down the two candles on the table in front of you, one candle on each end. You placed the bowl in the center. On each corner of the table, you placed one talisman. Now for the chant, you closely follow the words on the knife and what’s smeared on the walls one by one, making sure that you make no mistakes. \n\n' +
     'In nomine Magni Dei Nostri Satanas. Introibo ad altare Domini Inferi.  \n' +
-    'Ad eum qui laefificat meum. \n' +
+    'Ad eum qui laefificat meum. \n\n' +
     'You recite the incantation four times.' 
     ,
     options: [
@@ -961,7 +973,7 @@ const textNodes = [
     text: "Sitting there, on the nightstand right next to the bed, is a plain, white envelope. Completely unremarkable in nearly all aspects, save for a deep, crimson-red seal.",
     options: [
       {
-        text: 'The End?',
+        text: 'restart',
         nextText: -1,
       },
     ]
@@ -1002,7 +1014,7 @@ const textNodes = [
     , 
     options: [
       {
-        text: 'jump from where?',
+        text: '"jump from where?"',
         nextText: 68,
       },
     ]
@@ -1038,16 +1050,16 @@ const textNodes = [
     id: 70,
     bkgd: "url('../../images/ApartmentOutside.png')",
     text: 'Suicide, it has been declared. The security footage has confirmed that this young college student had taken his life by jumping from the window of his apartment, Apartment 404,  after only living there for 4 days. \n' +
-    'The other residents of the complex surrounded the scene, observing the incident that occurred and whispering to each other. \n' +
-    '“That apartment 404 is cursed. Not one has survived it after what had happened 30 years ago. You know, that crazy husband that killed his wife? Heard that he had schizophrenia and killed her during one of his episodes. He committed suicide after, but their souls were never put to rest” \n' +
-    '“Oh dear…not one has escaped. One resident after another, I can’t believe they’re still leasing that place…even though every resident there died from suicide.” \n' +
-    '“I guess when the price is so low, it’s hard to turn it down. But to think it was such a young boy that has fallen victim…” \n' +
-    '“I heard that some of the victims have hallucinations when living there. They would start screaming out of nowhere and when someone went to check on one of them, they would say they would see a woman, but there’s nothing there. Someone also walked in on one of them reciting this weird demonic chant in a daze. It’s almost like they were possessed. Is that part of the curse?” \n' +
+    'The other residents of the complex surrounded the scene, observing the incident that occurred and whispering to each other. \n\n' +
+    '“That apartment 404 is cursed. Not one has survived it after what had happened 30 years ago. You know, that crazy husband that killed his wife? Heard that he had schizophrenia and killed her during one of his episodes. He committed suicide after, but their souls were never put to rest” \n\n' +
+    '“Oh dear…not one has escaped. One resident after another, I can’t believe they’re still leasing that place…even though every resident there died from suicide.”\n\n' +
+    '“I guess when the price is so low, it’s hard to turn it down. But to think it was such a young boy that has fallen victim…” \n\n' +
+    '“I heard that some of the victims have hallucinations when living there. They would start screaming out of nowhere and when someone went to check on one of them, they would say they would see a woman, but there’s nothing there. Someone also walked in on one of them reciting this weird demonic chant in a daze. It’s almost like they were possessed. Is that part of the curse?” \n\n' +
     '“It must be. Poor boy…to be taken so soon. He was cursed. The devil doesn’t show mercy on anyone.”'
     , 
     options: [
       {
-        text: 'End',
+        text: 'Restart',
         nextText: -1,
       },
     ]
