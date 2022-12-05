@@ -9,11 +9,11 @@ function startGame() {
 }
 
 //audios
-var keys = new Audio('/audio/keys.mp3');
-var light = new Audio('/audio/light.mp3');
-var door = new Audio('/audio/door.mp3');
-var clock= new Audio('/audio/clock.mp3');
-var paper = new Audio('/audio/paper.mp3');
+var keys = new Audio('audio/keys.mp3');
+var light = new Audio('audio/light.mp3');
+var door = new Audio('audio/door.mp3');
+var clock= new Audio('audio/clock.mp3');
+var paper = new Audio('audio/paper.mp3');
 
 
 function showTextNode(textNodeIndex) {
