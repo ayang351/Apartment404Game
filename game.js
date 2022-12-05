@@ -764,7 +764,7 @@ const textNodes = [
   {
     // grabbing the candle
     id: 49,
-    bkgd: "url('images/waxCandle2.png')",
+    bkgd: "url('images/WaxCandle2.png')",
     text: "You grabbed the candle, but once it was in hand, images started to flash again. You see the same man and woman from before, but this time, they were sitting down peacefully here in the same dining room. The man wasn’t in an angry rampage like he was before, instead, he was peacefully dining with the same woman he attacked. They both wore a happy expression on their faces like a happily married couple, nothing like the angry and terrified looks of what you’ve seen before. The scene ends abruptly again, replaced by a loud crash of the dining table plunged to the ground in pieces",
     options: [
       {
