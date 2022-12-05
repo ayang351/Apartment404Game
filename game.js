@@ -9,11 +9,22 @@ function startGame() {
 }
 
 //audios
-var keys = new Audio('/audio/keys.mp3');
-var light = new Audio('/audio/light.mp3');
-var door = new Audio('/audio/door.mp3');
-var clock= new Audio('/audio/clock.mp3');
-var paper = new Audio('/audio/paper.mp3');
+var click = new Audio('audio/click.mp3');
+var keys = new Audio('audio/keys.mp3');
+var light = new Audio('audio/light.mp3');
+var door = new Audio('audio/door.mp3');
+var clock= new Audio('audio/clock.mp3');
+var paper = new Audio('audio/paper.mp3');
+var footsteps = new Audio('audio/footsteps.mp3');
+var lock = new Audio('audio/lock.mp3');
+var cabinet = new Audio('audio/cabinet.mp3');
+var pillBottle = new Audio('audio/pillBottle.mp3');
+var shower = new Audio('audio/shower.mp3');
+var fridge = new Audio('audio/fridge.mp3');
+var chair = new Audio('audio/chair.mp3');
+var crash = new Audio('audio/crash.mp3');
+var bang = new Audio('audio/bang.mp3');
+var ring = new Audio('audio/ring.mp3');
 
 
 function showTextNode(textNodeIndex) {
@@ -53,6 +64,7 @@ function selectOption(option) {
   }
   state = Object.assign(state, option.setState)
   showTextNode(nextTextNodeId)
+  click.play();
 }
 
 const textNodes = [
@@ -180,6 +192,7 @@ const textNodes = [
   {
     id: 9,
     bkgd: "url('images/blackBG.png')",
+    sound: light,
     text: 'Before you even have the ability to fully process your bewilderment at the letter’s content, the lamp abruptly cuts off. Not long after, the entire apartment begins to shake violently, as if being uprooted from the earth itself. Your head feels like it is about to explode as the sounds of furniture falling and silverware crashing amplify throughout the apartment. Right when you feel as though you’re about to fall apart, it all comes to a complete stop. The sound of the apartment collapsing in on itself has vanished. Silence permeates throughout the pitch-black room. The irritation that was fueling your movements only moments ago has now once again been replaced by an even greater sense. Complete and utter fear.',
     options: [
       {
@@ -379,6 +392,7 @@ const textNodes = [
     //AFTER TALISMAN #1 - DOOR
     id: 23,
     bkgd: "url('images/bedroom.png')",
+    sound: lock,
     text: "As you move to return to the center of your bedroom, you hear the faint sound of a key turning into place, coming from the direction of the doorway, perhaps it would be best to check it out?",
     options: [
       {
@@ -403,6 +417,7 @@ const textNodes = [
   {
     id: 25,
     bkgd: "url('images/blackBG.png')",
+    sound: footsteps,
     text: "You exit your bedroom and find yourself in the main hallway of your apartment, however, you are quickly cut off from proceeding any further by a pulsating shroud of fog, which has entirely blocked off the entranceway to the kitchen, and by extension, the rest of the apartment. Perhaps you need to search elsewhere in the apartment to open the way forward. Currently, the only other room currently available to you is the bathroom.",
     options: [
       {
@@ -438,6 +453,7 @@ const textNodes = [
     //CABINET
     id: 27,
     bkgd: "url('images/medicine.png')",
+    sound: cabinet,
     text: "You move towards the stained medicine cabinet lying above the equally dillapted sink. The worn doors of the cabinet nearly fall apart as you move to pull them, the hinges having rusted beyond repair. Upon examining the interior of the cupboard, you spot a lone medicine bottle tucked away in the corner.",
     options: [
       {
@@ -462,6 +478,7 @@ const textNodes = [
     //cabinet pt. 3
     id: 32,
     bkgd: "url('images/medicine.png')",
+    sound: pillBottle,
     text: "You open the bottle and reach for the contents within. As soon as your fingers make contact with the slip, you feel a sharp, squirming sensation slither course from your fingertips all the way to your head. The excruciating pain nearly causes you to collapse. You try to focus on the talisman, hoping desperately that it will provide you with some small salvation similar to how it did before. However, the talisman appears to be changing before your eyes, as the iridescent glow of the mark morphs into dull, crimson-tinted etchings so crude that they can barely be made out as words. Your head is splitting, and you feel like it’s only a matter of moments until you’ll slip out of consciousness entirely.",
     options: [
       {
@@ -474,6 +491,7 @@ const textNodes = [
     //cabinet pt. 4
     id: 33,
     bkgd: "url('images/blackBG.png')",
+    sound: paper,
     text: "BREAKING: MURDER IN NEWLY BUILT APARTMENT COMPLEX\n" + 
     "On September 17th, 1992, **** was announced dead at her apartment, having been found with grave physical trauma in the form of multiple stab wounds punctuated throughout her body." +
     "At the time of this report, **, the husband of the victim, has been apprehended and is currently being interrogated. **, aged 33, has had prior reports of domestic abuse, and it is currently believed that the assailant was experiencing a severe schizophrenic attack , which led him to lash out and ultimately fatally injure his partner.",
@@ -547,6 +565,7 @@ const textNodes = [
     //Shower pt. 2
     id: 36,
     bkgd: "url('images/blackBG.png')",
+    sound: shower,
     text: "You attempt to open the curtain so that you can step into the shower, but it doesn’t budge. Fortunately, there is a tear close enough to the drain to where the talisman could just barely be reached if you were to extend your arm through. " + 
     "You place your candle down on the floor, then kneel down to get closer to the tear in the shower curtain. You slowly poke your arm through the hole. As it becomes clearer that there is no immediate danger, you pick up the pace, and before long, " + 
     "your entire arm is protruding through the cover. You aimlessly grasp for the talisman, your arm now obfuscating your former viewpoint. Before long, you feel what you believe to be the talisman slip against your fingers. " + "You begin pulling your " + 
@@ -726,6 +745,7 @@ const textNodes = [
     //FRIDGE
     id: 45,
     bkgd: "url('images/blackBG.png')",
+    sound: fridge,
     text: "You looked inside your fridge. There was nothing in there other than a few bottles of water and some fruits your mom dropped off the other day. There doesn’t seem to be anything of interest here. ",
     options: [
       {
@@ -817,6 +837,7 @@ const textNodes = [
     // checking chair 1
     id: 51,
     bkgd: "url('images/blackBG.png')",
+    sound: chair,
     text: "There was nothing on or under this chair",
     options: [
       {
@@ -829,6 +850,7 @@ const textNodes = [
     // checking chair 2
     id: 52,
     bkgd: "url('images/blackBG.png')",
+    sound: chair,
     text: "There was nothing on this chair but there was a small slip of paper stuck to the underside of the chair. As you crouched down to get a closer look, it was another talisman, the last one you need to complete the ritual. As you peel it off, a gut-wrenching scream of a woman tears through the dining room. Still in shock, you proceeded to peel off the talisman thinking that the screaming will stop once you get it all off. Contrary to your expectations though, it only got louder and louder, turning into a piercing screech until you were able to tear the whole thing off. With the 4th talisman in hand, the screaming stopped, returning back to the eerie silence of your apartment.",
     options: [
       {
@@ -848,6 +870,7 @@ const textNodes = [
     // once talisman #4 and candle #2 collected, transition scene
     id: 53,
     bkgd: "url('images/diningTable.png')",
+    sound: crash, 
     text: "You heard a loud crash in the living room across from you. At this point, all the fog had disappeared.",
     options: [
       {
@@ -891,6 +914,7 @@ const textNodes = [
     // living room ritual pt 2
     id: 56,
     bkgd: "url('images/Window.png')",
+    sound: bang,
     text: "You were just about to perform the final step of the ritual before being abruptly interrupted by a loud bang on the window beside you. Your eyes darted to the window. And there, you see her. A harrowing figure of a woman staring intensely at you through the glass. You can see her clearly now, her grotesque form and her tattered, bloodied white nightgown. She began to make a piercing cry, ringing in your ear drums. She banged louder and louder, large cracks beginning to form from the impact of each pound. You looked at the knife in hand and back at her, adrenaline rushing through your veins. You only have a few seconds to react",
     options: [
       {
@@ -1003,6 +1027,7 @@ const textNodes = [
     // start of ending 2
     id: 65,
     bkgd: "url('images/blackBG.png')",
+    sound: bang,
     text: "With each successive bang, the window begins to disintegrate. You quickly grabbed the knife in hand and thought of only one thing to do at this moment. When the last support of the window was destroyed, you charged at her at full force, ready to plunge the knife deep inside her. She bursted through, the impact of the explosion throwing you backwards. You tried to regain your balance but as soon as you were able to adjust yourself, all you see in your vision is the horrific face of the woman inches from you. She let out another loud cry, one of intense agony and pain. Your head begins to spin violently and your senses become num. You tried swinging the knife at her, but you couldn’t move a muscle almost as if you were paralyzed. Your vision begins to blur, the face of the woman slowly disappearing in a black fog. You felt a sharp pain in your lower abdomen and the image of the woman plunging a knife deep inside it. Your senses slowly begin to disappear as you lie there in the pool of your own blood as she continuously stabs deep inside you until you couldn’t feel the pain anymore. Eventually, as you lay there helpless, your vision engulfs in complete darkness.",
     options: [
       {
@@ -1015,6 +1040,7 @@ const textNodes = [
     // ending 2 pt2
     id: 66,
     bkgd: "url('images/blackBG.png')",
+    sound: ring,
     text: '... \n' +
     '*ring* \n' +
     'You receive a call at 3am in the morning.'
