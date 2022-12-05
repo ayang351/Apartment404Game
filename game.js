@@ -40,18 +40,23 @@ function selectOption(option) {
   showTextNode(nextTextNodeId)
 }
 
+function playAudio() {
+  x.play();
+}
+
 const textNodes = [
   {
     id: 0,
     bkgd: "url('images/GhostReflection.png')", 
     text: 'Welcome to Apartment 404\n\n' + "This is an atmospheric text-based horror game based on the mysteries surrounding a haunted apartment where residents have reported to have experienced an odd level of paranormal events while living there. " +
-    "You are to play as the newest resident of apartment 404 that will uncover the mysteries of apartment 404.\n\n" + "tread cautiously and choose wisely",
+    "You are to play as the newest resident of apartment 404 that will uncover its mysteries.\n\n" + "tread cautiously and choose wisely",
     options: [
       {
         text: 'start',
         nextText: 1
       }
-    ]
+    ],
+    audioFile: 'ticking.mp3'
   },
   //start of pre-exploration
   {
