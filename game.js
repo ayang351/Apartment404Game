@@ -9,16 +9,12 @@ function startGame() {
 }
 
 //audios
-<<<<<<< HEAD
 var click = new Audio('audio/click.mp3');
-=======
->>>>>>> 091cf0a5490df3162390980407e0c3e8ba164d49
 var keys = new Audio('audio/keys.mp3');
 var light = new Audio('audio/light.mp3');
 var door = new Audio('audio/door.mp3');
 var clock= new Audio('audio/clock.mp3');
 var paper = new Audio('audio/paper.mp3');
-<<<<<<< HEAD
 var footsteps = new Audio('audio/footsteps.mp3');
 var lock = new Audio('audio/lock.mp3');
 var cabinet = new Audio('audio/cabinet.mp3');
@@ -29,8 +25,6 @@ var chair = new Audio('audio/chair.mp3');
 var crash = new Audio('audio/crash.mp3');
 var bang = new Audio('audio/bang.mp3');
 var ring = new Audio('audio/ring.mp3');
-=======
->>>>>>> 091cf0a5490df3162390980407e0c3e8ba164d49
 
 
 function showTextNode(textNodeIndex) {
@@ -52,6 +46,7 @@ function showTextNode(textNodeIndex) {
     }
   })
   
+  //play audio
   if (textNode.sound!=null) {
     textNode.sound.play();
   } 
