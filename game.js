@@ -8,6 +8,14 @@ function startGame() {
   showTextNode(0)
 }
 
+//audios
+var keys = new Audio('/audio/keys.mp3');
+var light = new Audio('/audio/light.mp3');
+var door = new Audio('/audio/door.mp3');
+var clock= new Audio('/audio/clock.mp3');
+var paper = new Audio('/audio/paper.mp3');
+
+
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
   document.body.style.backgroundImage = textNode.bkgd
@@ -16,6 +24,7 @@ function showTextNode(textNodeIndex) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild)
   }
 
+  
   textNode.options.forEach(option => {
     if (showOption(option)) {
       const button = document.createElement('button')
@@ -25,7 +34,13 @@ function showTextNode(textNodeIndex) {
       optionButtonsElement.appendChild(button)
     }
   })
+  
+  if (textNode.sound!=null) {
+    textNode.sound.play();
+  } 
 }
+
+ 
 
 function showOption(option) {
   return option.requiredState == null || option.requiredState(state)
@@ -40,10 +55,6 @@ function selectOption(option) {
   showTextNode(nextTextNodeId)
 }
 
-function playAudio() {
-  x.play();
-}
-
 const textNodes = [
   {
     id: 0,
@@ -56,12 +67,12 @@ const textNodes = [
         nextText: 1
       }
     ],
-    audioFile: 'ticking.mp3'
   },
   //start of pre-exploration
   {
     id: 1,
     bkgd: "url('images/DoorEntrance.png')",
+    sound: keys,
     text: 'You struggle to keep your eyes open as you fumble through your keychain. The semester has only just begun, and yet you already feel as if you are drowning in assignments. You have spent the entirety of the past few days attending lectures while juggling project meetings, and it is beginning to take its toll. You are overwhelmed with an insurmountable feeling of exhaustion, worsened by the fact that you have not been able to get a wink of sleep ever since…*click*. The weighty sound of a key turning into a lock interrupts your line of thought, replacing them with an intense feeling of relief. Finally, you can rest for the day. You stifle a yawn as you pull open the door. Not wanting to spend any second longer standing in the cold, dimly-lit hallway, you step into the dark entrance of your new home, apartment 404.',
     options: [
       {
@@ -73,6 +84,7 @@ const textNodes = [
   {
     id: 2,
     bkgd: "url('images/DoorEntrance.png')",
+    sound: door,
     text: 'It was only a few days ago that you found yourself in a state of complete panic. The starting date for the semester was inching closer and closer, but you had yet to find any living accommodations for the upcoming school months. It was not until you were at the end of your rope, having already come up short after contacting friends and apartment agencies, that you stumbled upon an ad for an apartment in a complex nearby the school. Though the apartment was aged in its appearance, the price was affordable enough, and the lack of any other option made it an attractive deal regardless of any “quirks” it might possess. At least, that’s what you believed until it came time to move in. ',
     options: [
       {
@@ -84,6 +96,7 @@ const textNodes = [
   {
     id: 3,
     bkgd: "url('images/livingRoom.png')",
+    sound: light,
     text: ' You flick on the light switch as you step into the apartment for what now marks the 4th night since you took residence. The lights sputter on, and you are greeted with the same, now familiar sights of the furnishings of your home. One thing that you took for a surprise upon your visit to the apartment was its size, appearing much larger on the inside than one would initially surmise given the layout of the complex. Though you appreciated all the space, you didn’t particularly enjoy having to spend the first two days performing a full sweep of it. It was obvious that no one had lived in the apartment for a very long time, as every inch of the kitchen, bathroom, and bedroom was caked with dust. Fortunately, this dire state of disrepair did not extend to the water and electricity, though a few of the light fixtures were emitting a dull, buzzing sound, and flickered constantly. You were planning on calling an electrician today to fix them, but it’s much too late now. For now, all you want to do is reach your bed and finally get some rest.',
     options: [
       {
@@ -106,6 +119,7 @@ const textNodes = [
   {
     id: 5,
     bkgd: "url('images/bedroom.png')",
+    sound: clock,
     text: '*Tick-tock* *tick-tock* *tick-tock*',
     options: [
       {
@@ -128,6 +142,7 @@ const textNodes = [
   {
     id: 7,
     bkgd: "url('images/bedroom.png')",
+    sound: light,
     text: 'You flick on the lamp residing on the nightstand, then pick up the letter. The envelope has remarkable features, in fact, it is completely blank, save for a deep, crimson-red seal that is holding it together. After a brief struggle, you manage to wrangle the letter from its paper shell. As you start to read its contents, you feel an unnerving chill tinge throughout your body. ',
     options: [
       {
@@ -139,6 +154,7 @@ const textNodes = [
   {
     id: 8,
     bkgd: "url('images/blackBG.png')",
+    sound: paper,
     text: 'To the resident of Apartment 404,\n' +
     'If you are receiving this letter, then I must inform you with the deepest regret that you have been placed under a terrible curse. Though the misfortune of your present circumstances is most utterly unfair, it is nonetheless the reality that you must face, especially if you intend on lasting through the night.' +
     'This curse is one that has been allowed to fester for decades, its darkness has grown so palpable that it has managed to crawl from the deepest depths of occultic obscurity and morph the very reality it subsides in.' +
